@@ -1,13 +1,18 @@
-import { Contact } from "@/components/ui/contact"
-import { Footer } from "@/components/ui/footer"
-import { Header } from "@/components/ui/header"
+import { Contact } from "@/components/ui/contact";
+import { Footer } from "@/components/ui/footer";
+import { Header } from "@/components/ui/header";
+import Head from "next/head";
 
 export default function ReciclajePage() {
     return (
+    <>
+        <Head>
+            <title>Servicios de Reciclaje - Ecopolmex</title>
+        </Head>
       <main>
         <Header />
         <section className="pt-24 pb-12 bg-white">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto pt-40">
             <h1 className="text-4xl font-bold text-[#003B7E] mb-6">Servicios de Reciclaje Integral</h1>
             <p className="text-lg text-gray-600 mb-8">
               Nuestros servicios de reciclaje integral ayudan a reducir el impacto ambiental de la industria del calzado,
@@ -19,6 +24,7 @@ export default function ReciclajePage() {
         <Contact />
         <Footer />
       </main>
+    </>
     )
   }
   
