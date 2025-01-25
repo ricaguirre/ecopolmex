@@ -1,15 +1,12 @@
+import RootLayout from "@/app/layout";
 import { Contact } from "@/components/ui/contact";
 import { Footer } from "@/components/ui/footer";
 import { Header } from "@/components/ui/header";
-import Head from "next/head";
 
 export default function InyeccionSuelasPage() {
     return (
     <>
-        <Head>
-            <title>Inyección de Suelas - Ecopolmex</title>
-            <meta name="description" content="Nuestro servicio de inyección de suelas utiliza tecnología de punta para producir suelas de alta calidad y precisión para todo tipo de calzado." />
-        </Head>
+    <RootLayout title="Inyección de Suelas - Ecopolmex" description="Descubre nuestra inyección de Suelas">
       <main>
         <Header />
         <section className="pt-24 pb-12 bg-white">
@@ -25,6 +22,7 @@ export default function InyeccionSuelasPage() {
         <Contact />
         <Footer />
       </main>
+    </RootLayout>
     </>
     )
   }

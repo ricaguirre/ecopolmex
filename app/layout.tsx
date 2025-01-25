@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -12,30 +11,26 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Inicio - Ecopolmex",
-  description: "My business website",
-};
-
-export default function RootLayout({
-  children,
-}: Readonly<{
+interface RootLayoutProps {
   children: React.ReactNode;
-}>) {
+  title: string;
+  description: string;
+}
+
+const RootLayout: React.FC<RootLayoutProps> = ({ children, title, description }) => {
   return (
-    <html lang="es">
-        <head>
-        <link rel="icon" href="images/logo.svg" type="image/x-icon" />
+    <html lang="en">
+      <head>
         <link rel="icon" type="image/svg" sizes="32x32" href="images/logo-32.svg" />
         <link rel="icon" type="image/svg" sizes="16x16" href="images/logo-16.svg" />
-        <title>{metadata.title}</title>
-        <meta name="description" content={metadata.description} />
+        <title>{title}</title> {/* Use the title prop */}
+        <meta name="description" content={description} /> {/* Use the description prop */}
       </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body>
         {children}
       </body>
     </html>
   );
-}
+};
+
+export default RootLayout;

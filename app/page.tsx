@@ -1,3 +1,4 @@
+import RootLayout from "@/app/layout"
 import { About } from "@/components/ui/about"
 import { Contact } from "@/components/ui/contact"
 import { FeatureGrid } from "@/components/ui/feature-grid"
@@ -11,6 +12,8 @@ import { VideoSection } from "@/components/ui/video"
 
 export default function Home() {
   return (
+  <>
+  <RootLayout title="Inicio - Ecopolmex" description="Fabricación de suelas para calzado">
     <main>
       <Header />
       <Hero />
@@ -22,6 +25,8 @@ export default function Home() {
       <VideoSection />
       <Contact />
     </main>
+  </RootLayout>
+  </>    
   )
 }
 

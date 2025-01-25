@@ -1,14 +1,12 @@
+import RootLayout from "@/app/layout";
 import { Contact } from "@/components/ui/contact";
 import { Footer } from "@/components/ui/footer";
 import { Header } from "@/components/ui/header";
-import Head from "next/head";
 
 export default function TRPage() {
   return (
     <>
-        <Head>
-            <title>TR - Ecopolmex</title>
-        </Head>
+    <RootLayout title="TR - Ecopolmex" description="Descubre nuestro TR">
     <main>
       <Header />
       <section className="pt-24 pb-12 bg-white">
@@ -24,6 +22,7 @@ export default function TRPage() {
       <Contact />
       <Footer />
     </main>
+    </RootLayout>
     </>
   )
 }
