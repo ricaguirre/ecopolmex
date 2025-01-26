@@ -1,12 +1,15 @@
-import RootLayout from "@/app/layout";
 import { Contact } from "@/components/ui/contact";
 import { Footer } from "@/components/ui/footer";
 import { Header } from "@/components/ui/header";
 
+export const metadata = {
+    title: "Servicios de Reciclaje - Ecopolmex",
+    description: "Nuestros servicios de reciclaje",
+  };
+  
+
 export default function ReciclajePage() {
     return (
-    <>
-    <RootLayout title="Servicios de Reciclaje - Ecopolmex" description="Nuestros servicios de reciclaje">
       <main>
         <Header />
         <section className="pt-24 pb-12 bg-white">
@@ -22,8 +25,6 @@ export default function ReciclajePage() {
         <Contact />
         <Footer />
       </main>
-      </RootLayout>
-    </>
     )
   }
   

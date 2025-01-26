@@ -1,14 +1,16 @@
-import RootLayout from "@/app/layout";
 import { Contact } from "@/components/ui/contact";
 import { Footer } from "@/components/ui/footer";
 import { Header } from "@/components/ui/header";
+
+export const metadata = {
+  title: "Prototipos e Inyección - Ecopolmex",
+  description: "Desarrolla tus prototipos con nosotros",
+};
 
 
 
 export default function PrototiposPage() {
     return (
-      <>
-      <RootLayout title="Prototipos e Inyección - Ecopolmex" description="Desarrolla tus prototipos con nosotros">
       <main>
         <Header />
         <section className="pt-24 pb-12 bg-white">
@@ -24,8 +26,6 @@ export default function PrototiposPage() {
         <Contact />
         <Footer />
       </main>
-      </RootLayout>
-    </> 
     )
   }
   
