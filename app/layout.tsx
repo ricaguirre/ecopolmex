@@ -21,6 +21,7 @@ const RootLayout: React.FC<RootLayoutProps> = ({ children, title, description })
   return (
     <html lang="en">
       <head>
+        <link rel="icon" href="images/logo.svg" type="image/svg+xml"/>
         <link rel="icon" type="image/svg" sizes="32x32" href="images/logo-32.svg" />
         <link rel="icon" type="image/svg" sizes="16x16" href="images/logo-16.svg" />
         <title>{title}</title> {/* Use the title prop */}
