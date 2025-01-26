@@ -5,21 +5,21 @@ import { useState } from 'react'
 export function Contact() {
   const [formStatus, setFormStatus] = useState<'idle' | 'submitting' | 'submitted' | 'error'>('idle')
 
-  // async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
-  //   event.preventDefault()
-  //   setFormStatus('submitting')
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault()
+    setFormStatus('submitting')
 
-  //   // const formData = new FormData(event.currentTarget)
+    // const formData = new FormData(event.currentTarget)
     
-  //   try {
-  //     await new Promise(resolve => setTimeout(resolve, 1000))
-  //     setFormStatus('submitted')
-  //     event.currentTarget.reset()
-  //   } catch (error) {
-  //     console.error(error)
-  //     setFormStatus('error')
-  //   }
-  // }
+    try {
+      await new Promise(resolve => setTimeout(resolve, 1000))
+      setFormStatus('submitted')
+      event.currentTarget.reset()
+    } catch (error) {
+      console.error(error)
+      setFormStatus('error')
+    }
+  }
 
   return (
     <section id="contacto" className="bg-gray-50 py-24">
