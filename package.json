@@ -5,7 +5,7 @@
   "homepage": "https://ricaguirre.github.io/ecopolmex/",
   "scripts": {
     "dev": "next dev",
-    "build": "next build && mkdir build && cp -r .next/* build/",
+    "build": "next build && mkdir build && robocopy .next build /E",
     "start": "next start",
     "lint": "next lint",
     "predeploy": "npm run build",
