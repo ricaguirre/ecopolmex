@@ -9,7 +9,7 @@
     "start": "next start",
     "lint": "next lint",
     "predeploy": "rimraf out && npm run build",
-    "deploy": "touch-cli out/.nojekyll && gh-pages -d out --dotfiles"
+    "deploy": "node -e \"require('fs').writeFileSync('out/.nojekyll', '')\" && gh-pages -d out --dotfiles"
   },
   "dependencies": {
     "@radix-ui/react-navigation-menu": "^1.2.3",
