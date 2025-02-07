@@ -17,10 +17,10 @@ export const metadata = {
   metadataBase: new URL('https://ricaguirre.github.io/ecopolmex'),
 };
 
-const getAssetPath = (path: string): string => {
-  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '/ecopolmex';
-  return `${basePath}${path}`;
-};
+// const getAssetPath = (path: string): string => {
+//   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '/ecopolmex';
+//   return `${basePath}${path}`;
+// };
 
 export default function RootLayout({
   children,
@@ -30,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
       <head>
-        <link rel="icon" href={getAssetPath('/images/logo.svg')} type="image/svg+xml" />
+        <link rel="icon" href='/images/logo.svg' type="image/svg+xml" />
         <link rel="icon" type="image/svg+xml" sizes="32x32" href="/images/logo-32.svg" />
         <link rel="icon" type="image/svg+xml" sizes="16x16" href="/images/logo-16.svg" />
       </head>
