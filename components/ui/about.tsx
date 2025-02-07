@@ -1,10 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const getAssetPath = (path: string): string => {
-  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '/ecopolmex';
-  return `${basePath}${path}`;
-};
+// const getAssetPath = (path: string): string => {
+//   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '/ecopolmex';
+//   return `${basePath}${path}`;
+// };
 
 export function About() {
   return (
@@ -30,7 +30,7 @@ export function About() {
         <div className="flex justify-center items-center">
           <div className="relative w-full aspect-square max-w-[500px]">
             <Image
-              src={getAssetPath('/images/1.png')}
+              src={'/images/1.png'} // src={getAssetPath('/images/1.png')}
               alt="1"
               fill
               className="rounded-lg object-cover"

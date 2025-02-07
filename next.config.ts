@@ -1,13 +1,7 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  output: 'export',
-  images: {
-    unoptimized: true,
-  },
-  // Required for GitHub Pages
-  basePath: '/ecopolmex',
-  assetPrefix: '/ecopolmex/',
-  trailingSlash: true, // Add this to ensure proper path resolution
-}
+import type { NextConfig } from "next";
 
-module.exports = nextConfig
+const nextConfig: NextConfig = {
+  /* config options here */
+};
+
+export default nextConfig;
